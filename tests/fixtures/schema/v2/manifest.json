@@ -1,0 +1,13 @@
+{
+  "app": "Lattice",
+  "id": "923b6d3d-332c-424d-9f1a-fd9e02f786ac",
+  "profileName": "Legacy work",
+  "createdAt": "2026-10-03T09:00:00.000Z",
+  "schemaVersion": 2,
+  "folders": {
+    "projects": "projects",
+    "people": "people",
+    "tasks": "tasks",
+    "notes": "notes"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "plnrly",
+  "private": true,
+  "version": "0.7.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "test": "node --test tests-*.cjs",
+    "check:schema": "node scripts/check-schema-migrations.cjs && npm test",
+    "build": "npm run check:schema && tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "start": "electron .",
+    "dev:electron": "PLNRLY_DEV_URL=http://127.0.0.1:4173 electron .",
+    "dmg": "npm run build && electron-builder --mac dmg --arm64 --config.electronDist=node_modules/electron/dist"
+  },
+  "dependencies": {
+    "ical.js": "^2.2.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.0"
+  },
+  "main": "electron/main.cjs",
+  "build": {
+    "appId": "app.plnrly.personal",
+    "productName": "Plnrly",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "docs/**/*",
+      "shared/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.productivity",
+      "hardenedRuntime": true,
+      "icon": "build/icon.png"
+    },
+    "dmg": {
+      "title": "Plnrly",
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "description": "A personal time management app with folder profiles and ICS calendars",
+  "author": "Plnrly"
+}

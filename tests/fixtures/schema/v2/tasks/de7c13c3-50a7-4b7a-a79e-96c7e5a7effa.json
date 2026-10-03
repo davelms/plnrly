@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "id": "de7c13c3-50a7-4b7a-a79e-96c7e5a7effa",
+  "createdAt": "2026-10-03T09:00:00.000Z",
+  "updatedAt": "2026-10-03T09:00:00.000Z",
+  "deletedAt": "2026-10-03T10:00:00.000Z",
+  "title": "Review homepage draft",
+  "description": "Check copy and mobile layout.",
+  "status": "Next",
+  "priority": "High",
+  "dueDate": "2026-10-05",
+  "projectIds": [
+    "d9346b7c-e519-4f71-8cc4-f62da0223596"
+  ],
+  "personIds": [
+    "1ab8805a-19ce-4bfb-8c23-565e1de597ae"
+  ],
+  "noteIds": [
+    "97af75d2-3f96-49a1-99ca-93d3fc3e507b"
+  ],
+  "customField": {
+    "source": "external assistant"
+  }
+}

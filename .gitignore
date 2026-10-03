@@ -1,0 +1,32 @@
+# Dependencies and generated app bundles
+node_modules/
+dist/
+release/
+work/
+build/*.iconset/
+*.tsbuildinfo
+coverage/
+test-results/
+playwright-report/
+
+# Local profile data and secrets
+local-profiles/
+.local/
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.p12
+*.p8
+*.key
+*.mobileprovision
+calendar-sources.bin
+profile-paths.json
+
+# Platform and tool output
+.DS_Store
+*.log
+*.dmg
+*.app/
+*.zip
